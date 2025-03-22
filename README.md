@@ -63,9 +63,13 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 
 ## 📈 Diagrammes
 - Diagramme de classes ✅
+
+
+
+
+
 - Diagramme de cas d'utilisation ✅
 
-*(Ajouter ici les images ou un lien vers le dossier `docs/` si tu veux les afficher)*
 
 ---
 
