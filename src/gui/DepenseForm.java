@@ -227,7 +227,7 @@ public class DepenseForm extends javax.swing.JInternalFrame {
             String dateStr = txtDate.getText().trim();
 
             if (libelle.isEmpty() || montantStr.isEmpty() || dateStr.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "❌ Tous les champs sont obligatoires !");
+                JOptionPane.showMessageDialog(this, " Tous les champs sont obligatoires !");
                 return;
             }
 
@@ -236,7 +236,7 @@ public class DepenseForm extends javax.swing.JInternalFrame {
             try {
                 montant = Double.parseDouble(montantStr);
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "❌ Le montant doit être un nombre valide !");
+                JOptionPane.showMessageDialog(this, " Le montant doit être un nombre valide !");
                 return;
             }
 
@@ -246,22 +246,22 @@ public class DepenseForm extends javax.swing.JInternalFrame {
             try {
                 date = sdf.parse(dateStr);
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(this, "❌ La date doit être au format yyyy-MM-dd !");
+                JOptionPane.showMessageDialog(this, " La date doit être au format yyyy-MM-dd !");
                 return;
             }
 
             // Mettre à jour la dépense
             Depense d = new Depense(id, libelle, montant, date);
             if (depenseService.update(d)) {
-                JOptionPane.showMessageDialog(this, "✅ Dépense modifiée avec succès !");
+                JOptionPane.showMessageDialog(this, "Dépense modifiée avec succès !");
                 loadDepense(); // Recharger la table
                 clearFields(); // Vider les champs
             } else {
-                JOptionPane.showMessageDialog(this, "❌ Erreur lors de la modification !");
+                JOptionPane.showMessageDialog(this, " Erreur lors de la modification !");
             }
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "❌ Erreur : " + e.getMessage());
+            JOptionPane.showMessageDialog(this, "Erreur : " + e.getMessage());
         }
     }//GEN-LAST:event_bnUpdateActionPerformed
 
@@ -269,7 +269,7 @@ public class DepenseForm extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         int selectedRow = ListeDepense.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "❌ Veuillez sélectionner une dépense à supprimer !");
+            JOptionPane.showMessageDialog(this, "Veuillez sélectionner une dépense à supprimer !");
             return;
         }
 
@@ -277,13 +277,12 @@ public class DepenseForm extends javax.swing.JInternalFrame {
         int confirm = JOptionPane.showConfirmDialog(this, "Voulez-vous vraiment supprimer cette dépense ?", "Confirmation", JOptionPane.YES_NO_OPTION);
         if (confirm != JOptionPane.YES_OPTION) return;
 
-        // ✅ Corrige ici : on récupère la dépense et on appelle la bonne méthode delete(Depense o)
         Depense d = depenseService.findById(id);
         if (d != null && depenseService.delete(d)) {
-            JOptionPane.showMessageDialog(this, "✅ Dépense supprimée avec succès !");
+            JOptionPane.showMessageDialog(this, " Dépense supprimée avec succès !");
             loadDepense();
         } else {
-            JOptionPane.showMessageDialog(this, "❌ Erreur lors de la suppression !");
+            JOptionPane.showMessageDialog(this, " Erreur lors de la suppression !");
         }
     }//GEN-LAST:event_bnSupprimerActionPerformed
 
@@ -301,22 +300,19 @@ public class DepenseForm extends javax.swing.JInternalFrame {
             String montantStr = txtMontant.getText().trim();
             String dateString = txtDate.getText().trim();
 
-            // ✅ Vérification des champs vides
             if (libelle.isEmpty() || montantStr.isEmpty() || dateString.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "❌ Tous les champs sont obligatoires !");
+                JOptionPane.showMessageDialog(this, " Tous les champs sont obligatoires !");
                 return;
             }
 
-            // ✅ Vérification Montant
             double montant;
             try {
                 montant = Double.parseDouble(montantStr);
             } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(this, "❌ Le montant doit être un nombre valide !");
+                JOptionPane.showMessageDialog(this, "Le montant doit être un nombre valide !");
                 return;
             }
 
-            // ✅ Vérification de la date
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             Date date;
             try {
@@ -326,17 +322,16 @@ public class DepenseForm extends javax.swing.JInternalFrame {
                 return;
             }
 
-            // ✅ Enregistrement
             Depense depense = new Depense(libelle, montant, date);
             if (depenseService.create(depense)) {
-                JOptionPane.showMessageDialog(this, "✅ Dépense ajoutée avec succès !");
+                JOptionPane.showMessageDialog(this, " Dépense ajoutée avec succès !");
                 loadDepense();
                 clearFields();
             } else {
-                JOptionPane.showMessageDialog(this, "❌ Erreur lors de l'ajout !");
+                JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout !");
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "❌ Vérifiez vos données : " + e.getMessage());
+            JOptionPane.showMessageDialog(this, "Vérifiez vos données : " + e.getMessage());
         }
     }//GEN-LAST:event_bnAjouterActionPerformed
      // Action du bouton Ajouter
