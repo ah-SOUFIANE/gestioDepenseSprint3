@@ -79,6 +79,9 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 ---
 
 ## 🎥 Démonstration Vidéo
-https://github.com/ton-nom-utilisateur/gestioDepenseSprint3/blob/main/gestiondepenses-netbeans-ide-802-2025-03-22-03-21-17_eZuqyCK9.mp4?raw=true
+<video width="640" height="360" controls>
+  <source src="https://github.com/ton-nom-utilisateur/gestioDepenseSprint3/blob/main/gestiondepenses-netbeans-ide-802-2025-03-22-03-21-17_eZuqyCK9.mp4?raw=true" type="video/mp4">
+  Votre navigateur ne supporte pas la lecture de la vidéo.
+</video>
 
 
