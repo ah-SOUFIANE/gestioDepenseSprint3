@@ -1,8 +1,7 @@
-##  Logo de l'Application
-![Logo Gestion des Dépenses Étudiants](./logo.jpg)
-
 # Gestion des Dépenses d’École
 
+##  Logo de l'Application
+<img src="./logo.png" alt="Logo Gestion des Dépenses Étudiants" width="200"/>
 
 ##  Description
 La **Gestion des Dépenses d’École** est une application **Java Swing** développée pour faciliter la gestion des dépenses scolaires.
