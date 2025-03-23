@@ -108,6 +108,9 @@ CREATE TABLE Utilisateur (
 );
 ```
 ---
+---
+## Architecture du projet :
+![Aperçu de l'application](./Architecture du projet.jpg)
 ##  Exécution
 - Ouvrir le projet dans **NetBeans**
 - Exécuter la classe `MDIApplication.java`
