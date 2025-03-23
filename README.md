@@ -74,7 +74,39 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 ![Aperçu de l'application](Screenshot%202025-03-23%20104634.png)
 
 ---
+ ##   Schéma SQL de la Base de Données
+ ```sql
+CREATE TABLE Etudiant (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
 
+CREATE TABLE Depense (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    libelle VARCHAR(100) NOT NULL,
+    montant DOUBLE NOT NULL,
+    date DATE NOT NULL
+);
+
+CREATE TABLE Paiement (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    etudiant_id INT NOT NULL,
+    depense_id INT NOT NULL,
+    date_paiement DATE NOT NULL,
+    statut ENUM('Payé', 'Non Payé') DEFAULT 'Non Payé',
+    FOREIGN KEY (etudiant_id) REFERENCES Etudiant(id) ON DELETE CASCADE,
+    FOREIGN KEY (depense_id) REFERENCES Depense(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Utilisateur (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'comptable', 'etudiant') NOT NULL
+);
+---
 ##  Exécution
 - Ouvrir le projet dans **NetBeans**
 - Exécuter la classe `MDIApplication.java`
