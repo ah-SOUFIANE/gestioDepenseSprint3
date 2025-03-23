@@ -157,14 +157,14 @@ public class MDIApplication extends javax.swing.JFrame {
         ouvrirForm(paiementForm); 
     }//GEN-LAST:event_paiementMenuItemActionPerformed
   private void ouvrirForm(JInternalFrame frame) {
-        desktopPane.add(frame);          // ✅ Ajoute au DesktopPane
-    frame.setVisible(true);          // ✅ Rendez la frame visible
+        desktopPane.add(frame);          
+    frame.setVisible(true);         
     try {
-        frame.setMaximum(true);      // ✅ Maximiser pour prendre tout l'espace
+        frame.setMaximum(true);      
     } catch (Exception e) {
         e.printStackTrace();
     }
-    frame.toFront();                 // ✅ Ramener devant
+    frame.toFront();                 
     frame.requestFocus();
     desktopPane.repaint();   
     }
