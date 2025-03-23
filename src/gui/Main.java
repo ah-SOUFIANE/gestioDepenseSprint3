@@ -24,9 +24,9 @@ public class Main extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         Connection cn = Connexion.getInstance().getCn();
         if (cn != null) {
-            System.out.println("✅ Connexion à la base de données réussie !");
+            System.out.println(" Connexion à la base de données réussie !");
         } else {
-            System.out.println("❌ Connexion échouée !");
+            System.out.println("Connexion échouée !");
         }
     }
 
