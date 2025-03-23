@@ -106,6 +106,7 @@ CREATE TABLE Utilisateur (
     password VARCHAR(255) NOT NULL,
     role ENUM('admin', 'comptable', 'etudiant') NOT NULL
 );
+```
 ---
 ##  Exécution
 - Ouvrir le projet dans **NetBeans**
