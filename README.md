@@ -12,7 +12,7 @@ Elle centralise toutes les informations relatives :
 
 ---
 
-## 🎯 Contexte
+##  Contexte
 Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 - Frais d’inscription
 - Paiements des étudiants
@@ -61,7 +61,7 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 
 ---
 
-## 📈 Diagrammes
+##  Diagrammes
 - Diagramme de classes 
 
 
@@ -70,6 +70,7 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 
 - Diagramme de cas d'utilisation 
 
+![Aperçu de l'application](Screenshot%202025-03-23%20104634.png)
 
 ---
 
