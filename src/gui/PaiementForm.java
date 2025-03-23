@@ -28,18 +28,15 @@ public class PaiementForm extends javax.swing.JInternalFrame {
     public PaiementForm() {
         initComponents();
            model = (DefaultTableModel) jTable1.getModel();
-    // ✅ Ajout des événements aux boutons
     bnAjouter.addActionListener(evt -> ajouterPaiement());
     bnsupprimer.addActionListener(evt -> supprimerPaiement());
  chargerCombos();
-    // ✅ Charger les listes déroulantes (JComboBox)
     }
     private void chargerCombos() {
         jComboBox1.removeAllItems();
         jComboBox2.removeAllItems();
         jComboBox3.removeAllItems();
 
-        // ✅ Charger la liste des étudiants
         List<Etudiant> etudiants = etudiantService.getAllEtudiants();
         etudiants.stream().forEach((e) -> {
             jComboBox1.addItem(e.getNom() + " " + e.getPrenom());
@@ -49,7 +46,6 @@ public class PaiementForm extends javax.swing.JInternalFrame {
              jComboBox2.addItem(d.getLibelle());
          });
 
-        // ✅ Ajouter les statuts
         jComboBox3.addItem("Payé");
         jComboBox3.addItem("Non Payé");
     }
@@ -58,13 +54,11 @@ public class PaiementForm extends javax.swing.JInternalFrame {
         String depense = (String) jComboBox2.getSelectedItem();
         String statut = (String) jComboBox3.getSelectedItem();
 
-        // ✅ Vérification des champs
         if (etudiant == null || depense == null || statut == null) {
-            JOptionPane.showMessageDialog(this, "❌ Veuillez remplir tous les champs !");
+            JOptionPane.showMessageDialog(this, " Veuillez remplir tous les champs !");
             return;
         }
 
-        // ✅ À AJOUTER : Récupérer le montant réel de la dépense sélectionnée
         double montant = 0;
         List<Depense> depenses = depenseService.getAllDepenses();
         for (Depense d : depenses) {
@@ -74,21 +68,19 @@ public class PaiementForm extends javax.swing.JInternalFrame {
             }
         }
 
-        // ✅ Ajout dans la table
         model.addRow(new Object[]{etudiant, depense, montant + " DH", statut});
-        JOptionPane.showMessageDialog(this, "✅ Paiement ajouté avec succès !");
+        JOptionPane.showMessageDialog(this, " Paiement ajouté avec succès !");
     }
 
-    // ✅ À AJOUTER : Suppression d'une ligne sélectionnée
     private void supprimerPaiement() {
         int selectedRow = jTable1.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "❌ Veuillez sélectionner un paiement à supprimer !");
+            JOptionPane.showMessageDialog(this, " Veuillez sélectionner un paiement à supprimer !");
             return;
         }
 
         model.removeRow(selectedRow);
-        JOptionPane.showMessageDialog(this, "✅ Paiement supprimé !");
+        JOptionPane.showMessageDialog(this, " Paiement supprimé !");
     }
  
     /**
