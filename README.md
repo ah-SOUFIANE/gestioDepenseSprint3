@@ -1,6 +1,10 @@
-# 📚 Gestion des Dépenses d’École
+##  Logo de l'Application
+![Logo Gestion des Dépenses Étudiants](./logo.jpg)
 
-## 📖 Description
+# Gestion des Dépenses d’École
+
+
+##  Description
 La **Gestion des Dépenses d’École** est une application **Java Swing** développée pour faciliter la gestion des dépenses scolaires.
 
 Elle centralise toutes les informations relatives :
