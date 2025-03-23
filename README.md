@@ -79,4 +79,3 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 ---
 
 ## 🎥 Démonstration Vidéo
- [View Issue #1](https://github.com/ah-SOUFIANE/gestioDepenseSprint3/issues/1)
