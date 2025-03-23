@@ -8,7 +8,7 @@ Elle centralise toutes les informations relatives :
 - Aux **dépenses réalisées**
 - Aux **paiements effectués**
 
-✅ Cette solution offre une interface conviviale permettant aux responsables de **suivre et contrôler** les opérations financières liées aux activités pédagogiques et parascolaires.
+ Cette solution offre une interface conviviale permettant aux responsables de **suivre et contrôler** les opérations financières liées aux activités pédagogiques et parascolaires.
 
 ---
 
@@ -18,14 +18,14 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 - Paiements des étudiants
 - Autres dépenses diverses
 
-🔎 Aujourd'hui, ces opérations se font souvent sur Excel ou sur des notes papier, ce qui entraîne :
+ Aujourd'hui, ces opérations se font souvent sur Excel ou sur des notes papier, ce qui entraîne :
 - Une perte de temps à chercher des informations
 - Des erreurs de calcul
 - Des difficultés à générer des rapports fiables
 
 ---
 
-## ✅ Objectifs
+##  Objectifs
 - Centraliser toutes les informations dans une base de données
 - Faciliter la gestion des :
   - Étudiants
@@ -39,7 +39,7 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 
 ---
 
-## 🛠️ Fonctionnalités
+##  Fonctionnalités
 - Ajouter / Modifier / Supprimer :
   - Étudiants
   - Dépenses
@@ -53,7 +53,7 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 
 ---
 
-## 🧑‍💻 Technologies utilisées
+##  Technologies utilisées
 - Java SE
 - Swing (Interface Graphique)
 - JDBC (Connexion à la base de données MySQL)
@@ -62,18 +62,18 @@ Dans un établissement scolaire, la gestion des dépenses est un défi majeur :
 ---
 
 ## 📈 Diagrammes
-- Diagramme de classes ✅
+- Diagramme de classes 
 
 
 
 
 
-- Diagramme de cas d'utilisation ✅
+- Diagramme de cas d'utilisation 
 
 
 ---
 
-## 💾 Exécution
+##  Exécution
 - Ouvrir le projet dans **NetBeans**
 - Exécuter la classe `MDIApplication.java`
 
