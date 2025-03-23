@@ -23,11 +23,9 @@ public class RecherchePaiementForm extends javax.swing.JInternalFrame {
 
          model = (DefaultTableModel) jTable1.getModel();
     }
-    // ✅ À AJOUTER : La méthode qui effectue la recherche
     private void rechercherPaiement() {
         String nomRecherche = jTextField1.getText().trim();
 
-        // ✅ À CHANGER : Plus tard tu vas remplacer cette simulation par une vraie recherche dans la base ou une liste
         model.setRowCount(0); // Vider la table avant de mettre le nouveau résultat
 
         // Exemple de résultats simulés
@@ -36,8 +34,7 @@ public class RecherchePaiementForm extends javax.swing.JInternalFrame {
         } else if (nomRecherche.equalsIgnoreCase("sara")) {
             model.addRow(new Object[]{"Sara", "Frais de scolarité", "2000 DH", "Non Payé"});
         } else {
-            // ✅ À AJOUTER : Message si l'étudiant n'existe pas
-            JOptionPane.showMessageDialog(this, "❌ Aucun paiement trouvé pour cet étudiant !");
+            JOptionPane.showMessageDialog(this, " Aucun paiement trouvé pour cet étudiant !");
         }
     }
     /**
