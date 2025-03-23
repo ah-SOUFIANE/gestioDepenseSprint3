@@ -243,18 +243,16 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
     String email = txtEmail.getText().trim();
 
     if (nom.isEmpty() || prenom.isEmpty() || email.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "❌ Tous les champs sont obligatoires !");
+        JOptionPane.showMessageDialog(this, " Tous les champs sont obligatoires !");
         return;
     }
 
-    // ✅ À AJOUTER : Ajouter l'étudiant dans la liste
     beans.Etudiant etudiant = new beans.Etudiant(nom, prenom, email);
     listeEtudiants.add(etudiant);
 
-    // ✅ Affichage dans la JTable
     model.addRow(new Object[]{idCounter++, nom, prenom, email});
 
-    JOptionPane.showMessageDialog(this, "✅ Étudiant ajouté avec succès !");
+    JOptionPane.showMessageDialog(this, " Étudiant ajouté avec succès !");
     clearFields();
 
     }//GEN-LAST:event_bnAjouterActionPerformed
